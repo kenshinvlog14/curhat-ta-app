@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Konselor - Curhat TA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="booking-page">
+    <header>
+        <nav class="navbar">
+            <div class="logo">🎓 Curhat TA</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="chat.html">Chat AI</a></li>
+                <li><a href="booking.html" class="active">Konselor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="booking-container">
+        <div class="booking-form-wrapper">
+            <h2>📅 Jadwalkan Sesi Konseling</h2>
+            <p class="subtitle">Jangan pendam sendirian. Bicarakan dengan konselor atau dosen pembimbing akademik yang peduli.</p>
+            
+            <form id="bookingForm" class="booking-form" action="http://localhost:5678/webhook-test/190a0f49-41b6-469c-935d-8dc5a27cb304" method="POST">
+                <div class="form-group">
+                    <label for="nama">Nama (Boleh Nama Samaran)</label>
+                    <input type="text" id="nama" name="nama" placeholder="Misal: Mahasiswa Lelah" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Mahasiswa (Untuk Konfirmasi)</label>
+                    <input type="email" id="email" name="email" placeholder="emailkampus@student.ac.id" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="topik">Topik Utama</label>
+                    <select id="topik" name="topik" required>
+                        <option value="" disabled selected>Pilih topik yang membebanimu...</option>
+                        <option value="Revisi Skripsi/TA">Revisi Skripsi/TA Tiada Henti</option>
+                        <option value="Error Teknis">Error Teknis (Coding/Desain)</option>
+                        <option value="Konflik Dosen">Kesulitan Komunikasi dengan Dosen</option>
+                        <option value="Burnout Akademik">Burnout & Kelelahan Mental</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tanggal">Pilih Tanggal</label>
+                    <input type="date" id="tanggal" name="tanggal" required>
+                </div>
+
+                <button type="submit" class="btn-primary btn-submit">Kirim Jadwal (via n8n)</button>
+            </form>
+            <p class="form-note">Konfirmasi jadwal akan dikirimkan otomatis ke emailmu.</p>
+        </div>
+    </main>
+</body>
+</html>
