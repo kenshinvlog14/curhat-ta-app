@@ -1,0 +1,196 @@
+/* ==========================================
+   CURHAT TA - CLEAN MODERN REDESIGN (100% CLEAN)
+   ========================================== */
+
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-light: #e0e7ff;
+  --bg-page: #f8fafc;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+  --border-subtle: #e2e8f0;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- NAVBAR --- */
+.nav-shell {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.nav-l {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-item:hover, .nav-item.is-active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.nav-r {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-cta {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nav-cta:hover {
+  background: var(--primary-hover);
+}
+
+/* --- HERO SECTION (Rapi & Tanpa Gambar Vektor Lama) --- */
+.hero, .home-hero {
+  max-width: 900px;
+  margin: 80px auto 40px;
+  padding: 0 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-title, h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.hero-desc {
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- TOMBOL AKSI UTAMA --- */
+.home-cta-btn, .kd-confirm-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.2);
+  transition: all 0.2s ease;
+}
+
+.home-cta-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* --- SECTION FITUR / KARTU --- */
+.features-section, .home-features {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.kd-card, .home-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s;
+}
+
+.kd-card:hover {
+  transform: translateY(-4px);
+}
+
+/* --- FOOTER --- */
+.footer {
+  background: #ffffff;
+  border-top: 1px solid var(--border-subtle);
+  padding: 60px 24px 40px;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 40px;
+}
+
+.footer-name {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.footer-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
