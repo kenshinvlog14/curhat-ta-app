@@ -64,6 +64,26 @@ export default function Booking() {
         return;
       }
 
+      // KIRIM DATA KE WEBHOOK N8N (UNTUK EMAIL GMAIL)
+      // ============================================
+      try {
+        await fetch("https://lit-tulsa-collaboration-draw.trycloudflare.com/webhook/190a0f49-41b6-469c-935d-8dc5a27cb304", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            bookingId: `BK-${Date.now()}`,
+            namaMahasiswa: nama,
+            emailMahasiswa: user?.email ?? "",
+            namaKonselor: "Konselor Polimedia",
+            kategori: topik,
+            tanggalSesi: tanggal,
+            sesiKe: 1
+          }),
+        });
+      } catch (webhookErr) {
+        console.error("Gagal kirim ke n8n:", webhookErr);
+      }
+
       setSuccess(true);
     } catch (err) {
       console.error("Terjadi kesalahan:", err);
